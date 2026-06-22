@@ -9,7 +9,7 @@ export default function Header() {
           src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/portal/static-assets/images/swiggy_logo_white.png"
           alt=""
         />
-        <div className=" text-white text-base font-bold flex gap-15 items-center">
+        <div className=" text-white text-xl font-bold flex gap-15 items-center">
           <a target="_blank" href="https://www.swiggy.com/corporate/">
             Swiggy Corporate
           </a>
