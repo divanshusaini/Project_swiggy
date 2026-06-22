@@ -1,6 +1,6 @@
-export default function FoodCard({ foodData }) {
+export default function GroceryCard({ foodData }) {
   return (
-    <div className="flex flex-col">
+    <div className="flex-none">
       <a href={foodData?.action.link}>
         <img
           className="h-40 w-30 object-cover  "
@@ -11,7 +11,7 @@ export default function FoodCard({ foodData }) {
           alt=""
         />
       </a>
-      <h2>{foodData?.action.text}</h2>
+      <h2 className="text-center font-bold">{foodData?.action.text}</h2>
     </div>
   );
 }
