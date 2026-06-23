@@ -4,6 +4,9 @@ import Header from './components/Header.js';
 import FoodOption from './components/FoodOption.js';
 import GroceryOptions from './components/GroceryOptions.jsx';
 import DineOption from './components/DineOption.js';
+import Restaurant from './components/Restaurant.jsx';
+
+
 function App(){
     return (
     <>
@@ -11,6 +14,7 @@ function App(){
     <FoodOption/>
     <GroceryOptions/>
     <DineOption/>
+    <Restaurant/>
     </>
     )
 }
