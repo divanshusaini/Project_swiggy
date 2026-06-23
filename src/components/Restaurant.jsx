@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import RestCard from "./RestCard";
+import Shimmar from "./Shimmer";
 
 export default function Restaurant(){
     const [RestData,setRestData] = useState([]);
@@ -11,16 +12,18 @@ export default function Restaurant(){
 
         const response = await fetch(proxyServer+swiggyApi)
         const data = await response.json();
-        setRestData(data.data.cards[1].card.card.gridElements.infoWithStyle.restaurants);
+        setRestData(data?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
         }
         fetchdata();
     },[])
 
-    // console.log(RestData);
+    // Shimmar effect 
+    if(RestData.length==0)
+        return <Shimmar/>
     return (
         <div className="flex flex-wrap w-[80%] mx-auto mt-20 gap-5">
             {
-                RestData.map((restInfo)=><RestCard key={restInfo.info.id} restInfo={restInfo}></RestCard>)
+                RestData.map((restInfo)=><RestCard key={restInfo?.info?.id} restInfo={restInfo}></RestCard>)
             }
 
         </div>
