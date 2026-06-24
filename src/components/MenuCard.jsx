@@ -22,6 +22,7 @@ const [isOpen,setIsOpen] = useState(true);
         <p className="text-3xl font-bold mb-4">{menuItems.title}</p>
         <button className="text-5xl mr-20 font-bold" onClick={()=>setIsOpen(!isOpen)}>{isOpen?'⌃':'˅'}</button>
         </div>
+        <div className="h-5 bg-gray-200 mt-2 mb-2"></div>
         </div>
    )
     }
@@ -37,6 +38,7 @@ const [isOpen,setIsOpen] = useState(true);
                 menuItems?.itemCards?.map((items)=><RestInfo key={items?.card?.info?.id} restData={items?.card?.info}/>)
             }
         </div>
+         <div className="h-5 bg-gray-200 mt-2 mb-2"></div>
        </div>
     )
 }
