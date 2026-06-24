@@ -28,7 +28,7 @@ export default function RestaurantMenu(){
     
         // console.log(filterData);
     return (
-        <div className="w-[80%] mx-auto ">
+        <div className="w-[80%] mx-auto  mt-20">
            {
             restData.map((menuItems)=><MenuCard key={menuItems?.card?.card?.title} menuItems={menuItems?.card?.card}/>)
            }
