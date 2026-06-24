@@ -11,7 +11,7 @@ const [isOpen,setIsOpen] = useState(true);
                  <p className="text-2xl font-bold">{menuItems.title}</p>
                  <div>
                      {
-                menuItems?.categories?.map((items)=><MenuCard key={items?.title} menuItems={items}/>)
+                menuItems?.categories?.map((items)=><MenuCard key={items?.title} menuItems={items} foodselected={foodselected}/>)
             }
                  </div>
             </div>
