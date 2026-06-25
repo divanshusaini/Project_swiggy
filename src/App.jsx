@@ -7,6 +7,7 @@ import RestaurantMenu from "./components/RestaurantMenu.jsx";
 import SearchFood from "./components/SearchFood.jsx";
 import RestHeader from "./components/RestHeader.jsx";
 import SecondaryHome from "./components/SecondaryHome.jsx";
+import Checkout from "./components/Checkout.jsx";
 import { store } from "./store/stores.jsx";
 import { Provider } from "react-redux";
 function App() {
@@ -19,7 +20,9 @@ function App() {
         <Route path="/restaurant" element={<Restaurant />}></Route>
         <Route path="/city/delhi/:id" element={<RestaurantMenu/>}></Route>
         <Route path ="/city/delhi/:id/search" element={<SearchFood/>}></Route></Route>
+        <Route path="/checkout" element={<Checkout/>}></Route>
       </Routes>
+      
     </BrowserRouter>
     </Provider>
   );

@@ -1,8 +1,9 @@
 import { useSelector } from "react-redux";
+import { Link } from "react-router";
 
 export default function RestHeader(){
  
-  const counter =   useSelector(state=>state.cartslice.items);
+  const counter =   useSelector(state=>state.cartslice.counti);
 
     return (
        <div className="container w-[80%] mx-auto py-4 px-8 bg-gray-200 text-5xl flex justify-between items-center">
@@ -10,7 +11,9 @@ export default function RestHeader(){
             <p className="text-orange-600 font-bold">Swiggy</p>
         </div>
         <div>
-            <p> Cart  {`(${counter.length})`}</p>
+            <Link to="/checkout">
+            <p> Cart  {`(${counter})`}</p>
+            </Link>
         </div>
        </div>
     )
