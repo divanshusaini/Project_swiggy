@@ -13,7 +13,7 @@ export default function Restaurant(){
         const response = await fetch(proxyServer+swiggyApi)
         const data = await response.json();
         
-        setRestData(data?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+        setRestData(data?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants || []);
         
         }
         fetchdata();
